@@ -1,0 +1,65 @@
+create database nregaProject;
+
+use nregaProject;
+
+create table employeeDetail
+(
+	recordNo int primary key auto_increment,
+	firstName char(25),
+	lastName char(25),
+	phone char(11),
+	age int,
+	state char(25),
+	district char(25),
+	village char(25),
+	address char(30),
+	adharNo char(20),
+	bankName char(25),
+	accNo char(25),
+	attendance char(25),
+	project char(35)
+);
+
+create table BDO(
+username char(25),
+password char(25),
+role char(25),
+firstname char(25),
+lastname char(25),
+area char(25),
+isValid boolean);
+
+insert into BDO(username,password,role,firstname,lastname,area) values('BDODGP','12345','BDO','Akash','Agarwal','Durgapur');
+insert into BDO(username,password,role,firstname,lastname,area) values('GPDGP','12345','GramPanchayat','Akash','koela','Durgapur');
+
+
+create table project(
+project_name char(25),
+max_employee int,
+purpose char(25),
+duration int,
+assigned_to char(25),
+money_allocated int
+);
+
+
+create table signUp
+(
+userName char(25),
+password char(25),
+firstName char(25),
+lastName char(25),
+phone char(25),
+state char(25),
+district char(25),
+village char(25),
+gender char(25),
+dob date,
+hintQuestion char(25),
+answer char(25),
+role char(25)
+);
+
+alter table project add district char(25);
+alter table project add village char(25);
+alter table project add date date;
